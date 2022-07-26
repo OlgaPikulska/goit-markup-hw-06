@@ -262,7 +262,7 @@ header {
   width: 528px;
   border-radius: 4px;
   background-color: var(--white-color);
-  display: flex;
+  display: inline;
   justify-content: flex-end;
   position: absolute;
 }
@@ -589,12 +589,15 @@ footer {
   padding-bottom: 9px;
   font-style: normal;
 }
-.footer-title {
+
+h4 {
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--white-color);
+}
+.footer-title-icons {
   padding-top: 72px;
   padding-left: 70px;
 }
@@ -642,6 +645,65 @@ footer {
 .icon-linkedin {
   width: 20px;
   height: 20px;
+}
+.footer-title-newsletter {
+  padding-top: 72px;
+  padding-left: 78px;
+}
+
+.newsletter {
+  margin-top: 20px;
+  height: 50px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: #2f303a;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+input::placeholder {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.button-newsletter {
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  /* padding-left: 42px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+  margin-left: 12px;
+  margin-bottom: 94px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-send {
+  fill: var(--white-color);
+  height: 24px;
+  width: 24px;
+  /* padding: 13px 8px 13px 24px; */
+}
+
+.button-newsletter-text {
+  padding: 10px 24px 10px 0;
 }
 /* PORTFOLIO */
 
