@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zadanie domowe #1</title>
-    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,7 @@
             <li>
               <a href="portfolio.html" class="nav">Portfolio</a>
             </li>
-            <li><a href="/Kontakt" class="nav third">Kontakt</a></li>
+            <li><a href="/Kontakt" class="nav">Kontakt</a></li>
           </ul>
         </nav>
         <div>
@@ -68,38 +68,50 @@
               <h2 class="modal-form-title">Zostaw swoje dane w formularzu poniżej</h2>
               <form name="signup_form" autocomplete="on">
                 <label>
-                  <p class="modal-form-text">Imię</p>
-                  <input type="text" name="name" class="modal-form-box">
+                  <span class="modal-form-text">Imię</span>
+                  <input type="text" name="name" class="modal-form-box" />
                   <svg class="modal-icon-name">
-                <use xlink:href="images/icons.svg#icon-icon_person"></use>
-              </svg>
+                    <use xlink:href="images/icons.svg#icon-icon_person"></use>
+                  </svg>
                 </label>
 
                 <label>
-                  <p class="modal-form-text">Telefon</p>
-                  <input type="tel" name="phone_number" class="modal-form-box">
+                  <span class="modal-form-text">Telefon</span>
+                  <input type="tel" name="phone_number" class="modal-form-box" />
                   <svg class="modal-icon-phone">
-                <use xlink:href="images/icons.svg#icon-icon_tel"></use>
-              </svg>
-                </label>
-                
-                <label>
-                  <p class="modal-form-text">E-mail</p>
-                  <input type="email" name="email" class="modal-form-box">
-                  <svg class="modal-icon-mail">
-                <use xlink:href="images/icons.svg#icon-icon_mail"></use>
-              </svg>
+                    <use xlink:href="images/icons.svg#icon-icon_tel"></use>
+                  </svg>
                 </label>
 
                 <label>
-                  <p class="modal-form-text">Komentarz</p>
-                  <textarea name="feedback" rows="6" placeholder="Wprowadź tekst"></textarea>
+                  <span class="modal-form-text">E-mail</span>
+                  <input type="email" name="email" class="modal-form-box" />
+                  <svg class="modal-icon-mail">
+                    <use xlink:href="images/icons.svg#icon-icon_mail"></use>
+                  </svg>
+                </label>
+
+                <label>
+                  <span class="modal-form-text">Komentarz</span>
+                  <textarea
+                    name="feedback"
+                    rows="6"
+                    placeholder="Wprowadź tekst"
+                    class="modal-textarea"
+                  ></textarea>
                 </label>
 
                 <label class="modal-checkbox">
-                  <p class="modal-checkbox-text">Oświadczam iż akceptuję <a href class="modal-checkbox-link">Regulamin</a> i <a href class="modal-checkbox-link">Politykę Prywatności</a>.</p>
-                  <input type="checkbox" name="statute" value="Oświadczam iż akceptuję Regulamin i Politykę Prywatności."/>
-                  
+                  <span class="modal-checkbox-text"
+                    >Oświadczam iż akceptuję <a href class="modal-checkbox-link">Regulamin</a> i
+                    <a href class="modal-checkbox-link">Politykę Prywatności</a>.</span
+                  >
+                  <input
+                    type="checkbox"
+                    name="statute"
+                    value="Oświadczam iż akceptuję Regulamin i Politykę Prywatności."
+                  />
+
                   <span class="checkmark">
                     <svg class="modal-checkbox-icon">
                       <use xlink:href="images/icons.svg#icon-icon_check"></use>
@@ -107,7 +119,7 @@
                   </span>
                 </label>
                 <div class="modal-button-position">
-                <button type="submit" class="modal-form-button">Wyślij</button>
+                  <button type="submit" class="modal-form-button">Wyślij</button>
                 </div>
               </form>
             </div>
@@ -228,25 +240,33 @@
                   <span class="signature-name">John Doe</span>
                   <span class="signature-job">Product Designer</span>
                   <ul class="team-icons-position">
-                    <li class="team-icons">
-                      <svg class="icon-instagram">
-                        <use href="images/icons.svg#icon-instagram"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-instagram">
+                          <use href="images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-twitter">
-                        <use href="images/icons.svg#icon-twitter"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-twitter">
+                          <use href="images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-social-facebook">
-                        <use href="images/icons.svg#icon-facebook"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-social-facebook">
+                          <use href="images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-linkedin">
-                        <use href="images/icons.svg#icon-linkedin"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-linkedin">
+                          <use href="images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </figcaption>
@@ -266,25 +286,33 @@
                   <span class="signature-name">John Doe</span>
                   <span class="signature-job">Frontend Developer</span>
                   <ul class="team-icons-position">
-                    <li class="team-icons">
-                      <svg class="icon-instagram">
-                        <use href="images/icons.svg#icon-instagram"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-instagram">
+                          <use href="images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-twitter">
-                        <use href="images/icons.svg#icon-twitter"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-twitter">
+                          <use href="images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-social-facebook">
-                        <use href="images/icons.svg#icon-facebook"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-social-facebook">
+                          <use href="images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-linkedin">
-                        <use href="images/icons.svg#icon-linkedin"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-linkedin">
+                          <use href="images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </figcaption>
@@ -304,25 +332,33 @@
                   <span class="signature-name">John Doe</span>
                   <span class="signature-job">Marketing</span>
                   <ul class="team-icons-position">
-                    <li class="team-icons">
-                      <svg class="icon-instagram">
-                        <use href="images/icons.svg#icon-instagram"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-instagram">
+                          <use href="images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-twitter">
-                        <use href="images/icons.svg#icon-twitter"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-twitter">
+                          <use href="images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-social-facebook">
-                        <use href="images/icons.svg#icon-facebook"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-social-facebook">
+                          <use href="images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-linkedin">
-                        <use href="images/icons.svg#icon-linkedin"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-linkedin">
+                          <use href="images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </figcaption>
@@ -342,25 +378,33 @@
                   <span class="signature-name">John Doe</span>
                   <span class="signature-job">UI Designer</span>
                   <ul class="team-icons-position">
-                    <li class="team-icons">
-                      <svg class="icon-instagram">
-                        <use href="images/icons.svg#icon-instagram"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-instagram">
+                          <use href="images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-twitter">
-                        <use href="images/icons.svg#icon-twitter"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-twitter">
+                          <use href="images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-social-facebook">
-                        <use href="images/icons.svg#icon-facebook"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-social-facebook">
+                          <use href="images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
                     </li>
-                    <li class="team-icons">
-                      <svg class="icon-linkedin">
-                        <use href="images/icons.svg#icon-linkedin"></use>
-                      </svg>
+                    <li>
+                      <a href class="team-icons">
+                        <svg class="icon-linkedin">
+                          <use href="images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </figcaption>
@@ -425,25 +469,33 @@
           <section class="footer-title-icons">
             <h4>Dołącz do nas</h4>
             <ul class="footer-icons-position">
-              <li class="footer-icons">
-                <svg class="icon-instagram">
-                  <use href="images/icons.svg#icon-instagram"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-instagram">
+                    <use href="images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-twitter">
-                  <use href="images/icons.svg#icon-twitter"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-twitter">
+                    <use href="images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-social-facebook">
-                  <use href="images/icons.svg#icon-facebook"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-social-facebook">
+                    <use href="images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-linkedin">
-                  <use href="images/icons.svg#icon-linkedin"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-linkedin">
+                    <use href="images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
@@ -451,12 +503,15 @@
             <h4>Zapisz się do newslettera</h4>
             <form name="signup_form" autocomplete="on" novalidate>
               <label>
-              <input type="email" name="E-mail" placeholder="E-mail" class="newsletter" />
+                <input type="email" name="E-mail" placeholder="E-mail" class="newsletter" />
               </label>
               <button type="submit" class="button-newsletter">
                 <span class="button-newsletter-text">Zapisz się</span>
                 <svg class="icon-send">
-                  <use xlink:href="images/icons.svg#icon-icon_send"></use></svg></button>
+                  <use xlink:href="images/icons.svg#icon-icon_send"></use>
+                </svg>
+              </button>
+            </form>
           </section>
         </div>
       </div>

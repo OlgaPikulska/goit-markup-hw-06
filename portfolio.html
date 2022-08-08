@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zadanie domowe #2</title>
-    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,7 @@
             <li>
               <a href="portfolio.html" class="nav active">Portfolio</a>
             </li>
-            <li><a href="/Kontakt" class="nav third">Kontakt</a></li>
+            <li><a href="/Kontakt" class="nav">Kontakt</a></li>
           </ul>
         </nav>
         <div>
@@ -297,25 +297,33 @@
           <section class="footer-title-icons">
             <h4>Dołącz do nas</h4>
             <ul class="footer-icons-position">
-              <li class="footer-icons">
-                <svg class="icon-instagram">
-                  <use href="images/icons.svg#icon-instagram"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-instagram">
+                    <use href="images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-twitter">
-                  <use href="images/icons.svg#icon-twitter"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-twitter">
+                    <use href="images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-social-facebook">
-                  <use href="images/icons.svg#icon-facebook"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-social-facebook">
+                    <use href="images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-icons">
-                <svg class="icon-linkedin">
-                  <use href="images/icons.svg#icon-linkedin"></use>
-                </svg>
+              <li>
+                <a href class="footer-icons">
+                  <svg class="icon-linkedin">
+                    <use href="images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
@@ -323,9 +331,15 @@
             <h4>Zapisz się do newslettera</h4>
             <form name="signup_form" autocomplete="on" novalidate>
               <label>
-              <input type="email" name="email" placeholder="E-mail" class="newsletter" />
+                <input type="email" name="email" placeholder="E-mail" class="newsletter" />
               </label>
-              <button type="submit" class="button-newsletter"><span class="button-newsletter-text">Zapisz się</span><svg class="icon-send"><use xlink:href="images/icons.svg#icon-icon_send"></use></svg></button>
+              <button type="submit" class="button-newsletter">
+                <span class="button-newsletter-text">Zapisz się</span
+                ><svg class="icon-send">
+                  <use xlink:href="images/icons.svg#icon-icon_send"></use>
+                </svg>
+              </button>
+            </form>
           </section>
         </div>
       </div>

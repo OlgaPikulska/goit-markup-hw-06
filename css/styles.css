@@ -95,7 +95,6 @@ header {
   color: var(--white-color);
 }
 .logo-place-footer {
-  padding-top: 60px;
   padding-left: 15px;
   padding-bottom: 20px;
 }
@@ -118,7 +117,7 @@ header {
   gap: 46px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, text-decoration;
+  transition-property: color, text-decoration, background-color;
   position: relative;
 }
 
@@ -126,10 +125,14 @@ header {
 .nav:focus {
   color: var(--blue-color);
   text-decoration: none;
+  /* width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue-color); */
 }
 
-.third {
-  padding-right: 345px;
+.active {
+  color: var(--blue-color);
 }
 
 .active::after {
@@ -141,6 +144,7 @@ header {
   border-radius: 2px;
   background-color: var(--blue-color);
 }
+
 .contact {
   font-family: Roboto;
   font-size: 14px;
@@ -169,9 +173,9 @@ header {
 
 .mail {
   padding-right: 30px;
+  padding-left: 345px;
 }
 .icon-header_mail_envelope {
-  stroke: var(--grey-color);
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -182,7 +186,6 @@ header {
 }
 
 .icon-header_tel_smartphone {
-  stroke: var(--grey-color);
   width: 10px;
   height: 16px;
   margin-right: 10px;
@@ -259,8 +262,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-property: transform, visibility, opacity;
-  transition-duration: 500ms;
+
+  transition-property: visibility, opacity;
+  transition-duration: 100ms;
   transition-timing-function: linear;
 }
 
@@ -274,6 +278,11 @@ header {
   /* align-items: center;
   justify-content: center; */
   position: absolute;
+
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+  transform: scale(100%);
 }
 
 .button-close {
@@ -287,7 +296,7 @@ header {
   margin-top: 8px;
   margin-right: 8px;
   margin-left: 490px;
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, background-color, color;
 }
@@ -314,7 +323,7 @@ header {
   text-align: center;
   color: #212121;
   padding-bottom: 2px;
-  padding-top: 2px;
+  padding-top: 5px;
 }
 
 .modal-form-box {
@@ -325,7 +334,7 @@ header {
   margin-left: 40px;
   position: relative;
   padding-left: 42px;
-  /* outline: none; */
+  outline: none;
 }
 
 .modal-icon-name {
@@ -368,7 +377,7 @@ header {
   padding-top: 10px;
 }
 
-textarea {
+.modal-textarea {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -377,6 +386,7 @@ textarea {
   resize: none;
   padding-top: 12px;
   padding-left: 16px;
+  outline: none;
 }
 
 textarea::placeholder {
@@ -393,6 +403,7 @@ textarea::placeholder {
   display: block;
   position: relative;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .modal-checkbox input {
@@ -438,7 +449,7 @@ textarea::placeholder {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   margin-left: 88px;
   cursor: default;
 }
@@ -451,14 +462,16 @@ textarea::placeholder {
 
 input:focus + .modal-icon-name,
 input:focus + .modal-icon-phone,
-input:focus + .modal-icon-mail,
-textarea,
-input {
+input:focus + .modal-icon-mail {
   fill: var(--blue-color);
-  outline-color: var(--blue-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: outline-color, fill;
+  transition-property: fill;
+}
+
+.modal-form-box:focus,
+.modal-textarea:focus {
+  border: 1px solid var(--blue-color);
 }
 
 .modal-form-button {
@@ -487,6 +500,8 @@ input {
 }
 
 .modal-button-position {
+  margin-top: 30px;
+  margin-bottom: 37px;
   display: flex;
   justify-content: center;
 }
@@ -597,8 +612,9 @@ input {
 
 .team-background {
   background-color: #f5f4fa;
-  max-width: 1600px;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .team {
@@ -664,10 +680,10 @@ input {
   padding-top: 16px;
   padding-left: 32px;
   padding-bottom: 30px;
+  list-style: none;
 }
 
 .team-icons {
-  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -677,7 +693,6 @@ input {
   width: 44px;
   height: 44px;
   fill: #afb1b8;
-  cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color, fill;
@@ -762,6 +777,9 @@ footer {
 .footer-position {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-contact {
   font-family: Roboto;
@@ -773,12 +791,15 @@ footer {
   text-decoration: none;
   color: #ffffff60;
   display: block;
-  /* nie wiem na jaki kolor ma zmieniać się kontakt po najechaniu kursorem C5 */
   padding-left: 15px;
-  padding-bottom: 9px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
-.footer-tel {
-  padding-bottom: 60px;
+
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--blue-color);
 }
 
 .address {
@@ -802,16 +823,16 @@ h4 {
   color: var(--white-color);
 }
 .footer-title-icons {
-  padding-top: 72px;
+  /* padding-top: 72px; */
   padding-left: 70px;
 }
 .footer-icons-position {
   display: inline-flex;
   gap: 10px;
   margin-top: 20px;
+  list-style: none;
 }
 .footer-icons {
-  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -821,7 +842,6 @@ h4 {
   width: 44px;
   height: 44px;
   fill: var(--white-color);
-  cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
@@ -851,7 +871,7 @@ h4 {
   height: 20px;
 }
 .footer-title-newsletter {
-  padding-top: 72px;
+  /* padding-top: 72px; */
   padding-left: 78px;
 }
 
@@ -889,11 +909,7 @@ input::placeholder {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--white-color);
-  /* padding-left: 42px;
-  padding-top: 10px;
-  padding-bottom: 10px; */
   margin-left: 12px;
-  margin-bottom: 94px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -945,12 +961,13 @@ input::placeholder {
   padding-right: 22px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color, color;
+  transition-property: background-color, color, box-shadow;
 }
 .buttons:hover,
 .buttons:focus {
   color: var(--white-color);
   background-color: var(--blue-color);
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
 }
 
 .image-signature {
@@ -993,7 +1010,6 @@ input::placeholder {
 
 .pictures-box {
   width: 370px;
-  height: 404px;
   margin: 0px;
   box-shadow: none;
   cursor: pointer;
